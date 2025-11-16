@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <meta name="description" content="Portfolio personnel de (Ton Nom) — Développeur Web | Étudiant·e en Informatique | Projets, compétences, réalisations et contact." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#6c5ce7;      /* violet doux */
+      --brand-2:#a29bfe;    /* lavande */
+      --ink:#1f2937;        /* gris foncé */
+      --bg:#f8fafc;         /* gris très clair */
+      --card:#ffffff;       /* blanc */
+    }
+    html{ scroll-behavior:smooth; }
+    body{ background:var(--bg); color:var(--ink); }
+
+    .navbar{ box-shadow:0 6px 20px rgba(31,41,55,.05); }
+    .navbar-brand .logo-dot{ display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--brand-2);margin-left:.25rem; }
+
+    .hero{
+      background: radial-gradient(90rem 60rem at 10% 10%, rgba(162,155,254,.25), transparent 40%),
+                  radial-gradient(100rem 70rem at 90% 0%, rgba(108,92,231,.2), transparent 40%);
+      padding: 8rem 0 5rem;
+    }
+    .hero .avatar{
+      width: 160px; height:160px; object-fit:cover; border-radius:50%;
+      border:6px solid #fff; box-shadow:0 10px 30px rgba(108,92,231,.25);
+    }
+    .chip{ border:1px solid rgba(108,92,231,.35); color:var(--brand); background:#fff; }
+    .project-card{ border:0; border-radius:1rem; overflow:hidden; box-shadow:0 12px 30px rgba(31,41,55,.08); }
+    .section-title{ font-weight:800; letter-spacing:.3px; color:var(--ink); }
+
+    /* Bouton Haut de page (sans JS: simple ancre vers #home) */
+    .to-top{
+      position:fixed; right:1rem; bottom:1rem; z-index:1030;
+    }
+
+    footer{ background:#0f172a; color:#e2e8f0; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home" aria-label="Aller à l'accueil">
+        Ousmane Diallo
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Réalisations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-sm btn-primary px-3" style="--bs-btn-bg:var(--brand);--bs-btn-border-color:var(--brand);" href="#contact">Me contacter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / ACCUEIL -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-5 text-center text-lg-start">
+          <img class="avatar mb-3" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=600&auto=format&fit=crop" alt="Photo de profil">
+          <div>
+            <span class="badge rounded-pill chip me-1">Développeur Web</span>
+            <span class="badge rounded-pill chip me-1">Étudiant en Informatique a l'Universite de Moncton</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <h1 class="display-5 fw-bold mb-3">Salut, je m'appelle <span class="text-primary" style="color:var(--brand)!important">Ousmane Diallo</span> 👋</h1>
+          <p class="lead mb-4">Je crée des expériences web modernes, accessibles et réactives. Découvre ci‑dessous mes projets, mes compétences et comment me joindre.</p>
+          <div class="d-flex gap-3">
+            <a class="btn btn-primary btn-lg" style="--bs-btn-bg:var(--brand);--bs-btn-border-color:var(--brand);" href="#projects">Voir mes projets</a>
+            <a class="btn btn-outline-primary btn-lg" style="--bs-btn-color:var(--brand);--bs-btn-border-color:var(--brand);" href="#contact"><i class="bi bi-envelope-open me-1"></i>Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS (Carousel Bootstrap) -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col">
+          <h2 class="section-title">Projets sélectionnés</h2>
+          <p class="text-secondary mb-0">1 à 3 projets avec captures d'écran, description et liens.</p>
+        </div>
+        <div class="col-auto"><span class="badge text-bg-light">Carousel Bootstrap</span></div>
+      </div>
+
+      <div id="projectsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner rounded-4 shadow">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Projet 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Projet 1 — Application ToDo</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Projet 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Projet 2 — Site de vente en ligne Jumia</h5>
+   
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Projet 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Projet 3 — Plateforme de gestion des ressources humaines</h5>
+              
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card h-100">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop" alt="Vignette Projet 1"/>
+            <div class="card-body">
+              <h5 class="card-title">Application To-Do</h5>
+              <p class="card-text">L'application To-Do est un outil simple et efficace qui permet aux utilisateurs de gérer leurs tâches quotidiennes, d’organiser leurs activités et d’améliorer leur productivité. L’objectif principal de cette application est d’aider l’utilisateur à mieux organiser son temps, à suivre ses objectifs et à maintenir une bonne discipline personnelle, que ce soit pour les études, le travail ou la vie quotidienne.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card h-100">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=900&auto=format&fit=crop" alt="Vignette Projet 2"/>
+            <div class="card-body">
+              <h5 class="card-title">Site de vente en ligne Jumia</h5>
+              <p class="card-text">Jumia est une plateforme de commerce électronique, permettant aux utilisateurs d’acheter une grande variété de produits en ligne. Elle fonctionne comme un marketplace, où des vendeurs locaux et internationaux proposent leurs articles, tandis que Jumia assure la logistique, la sécurité des paiements et le service après-vente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card h-100">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=900&auto=format&fit=crop" alt="Vignette Projet 3"/>
+            <div class="card-body">
+              <h5 class="card-title">Plateforme de gestion des ressources humaines</h5>
+              <p class="card-text">C'est une plateforme qui permet de faciliter et automatiser les tâches administratives et stratégiques liées à la gestion du personnel du recrutement jusqu’à la paie tout en améliorant la communication interne et la productivité.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="skills" class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col">
+          <h2 class="section-title">Compétences</h2>
+          <p class="text-secondary mb-0">Langages, outils, frameworks et logiciels.</p>
+        </div>
+        <div class="col-auto"><span class="badge text-bg-light">Badges & Progress</span></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill text-bg-primary">HTML5</span>
+            <span class="badge rounded-pill text-bg-primary">CSS3</span>
+            <span class="badge rounded-pill text-bg-primary">Bootstrap 5</span>
+            <span class="badge rounded-pill text-bg-secondary">JavaScript</span>
+            <span class="badge rounded-pill text-bg-secondary">Git & GitHub</span>
+            <span class="badge rounded-pill text-bg-info">Java</span>
+            <span class="badge rounded-pill text-bg-info">Photoshop</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>HTML/CSS</span><span>85%</span></div>
+            <div class="progress" role="progressbar" aria-label="HTML CSS" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:85%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Bootstrap</span><span>80%</span></div>
+            <div class="progress" role="progressbar" aria-label="Bootstrap" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:80%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>JavaScript</span><span>70%</span></div>
+            <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Git & GitHub</span><span>75%</span></div>
+            <div class="progress" role="progressbar" aria-label="Git" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:75%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Java</span><span>65%</span></div>
+            <div class="progress" role="progressbar" aria-label="Design" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:65%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Photoshop</span><span>60%</span></div>
+            <div class="progress" role="progressbar" aria-label="A11y" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS & RÉCOMPENSES -->
+  <section id="awards" class="py-5">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col">
+          <h2 class="section-title">Réalisations & récompenses</h2>
+          <p class="text-secondary mb-0">Certifications, prix, mentions — en lien avec l'informatique et le web.</p>
+        </div>
+        <div class="col-auto"><span class="badge text-bg-light">Cards & Alerts</span></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-award me-2"></i>Certification HTML5</h5>
+              <p class="card-text">Certification en structuration sémantique, accessibilité et bonnes pratiques CSS.</p>
+              <span class="badge text-bg-success">2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-trophy me-2"></i>Hackathon Universitaire</h5>
+              <p class="card-text">2e place — Application d'aide à l'étude avec rappels intelligents et UI responsive.</p>
+              <span class="badge text-bg-warning text-dark">2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-stars me-2"></i>Prix UX Étudiant</h5>
+              <p class="card-text">Reconnaissance pour la qualité de l'expérience utilisateur et l'accessibilité.</p>
+              <span class="badge text-bg-info text-dark">2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-primary mt-4" role="alert">
+        <strong>Nouveau:</strong> Mon récent projet « Portail Étudiant » est en cours d'amélioration: performance + accessibilité.
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col">
+          <h2 class="section-title">Me contacter</h2>
+          <p class="text-secondary mb-0">Email, réseaux sociaux et formulaire de contact.</p>
+        </div>
+        <div class="col-auto"><span class="badge text-bg-light">Form controls</span></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+            <h5 class="fw-bold mb-3">Coordonnées</h5>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2"><i class="bi bi-envelope me-2"></i><a href="mailto:prenom.nom@email.com">ousmaane07@gmail.com</a></li>
+              <li class="mb-2"><i class="bi bi-linkedin me-2"></i><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li class="mb-2"><i class="bi bi-github me-2"></i><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+              <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Moncton, NB</li>
+            </ul>
+            <p class="small text-secondary mb-0">Disponible pour stages et projets freelance.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-7">
+          <form class="p-4 bg-white rounded-4 shadow-sm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="name" placeholder="Ex: Aicha Ba" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label">Sujet</label>
+                <input type="text" class="form-control" id="subject" placeholder="Objet du message" required>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Ton message..." required></textarea>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-4">
+              <button type="submit" class="btn btn-primary" style="--bs-btn-bg:var(--brand);--bs-btn-border-color:var(--brand);">
+                <i class="bi bi-send me-1"></i>Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <div>
+        <strong>Ousmane Diallo</strong> — Portfolio • <span class="text-secondary">© 2025</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a class="link-light" href="#home">Haut de page</a>
+        <a class="link-light" href="#projects">Projets</a>
+        <a class="link-light" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton Haut de page (ancre) -->
+  <a class="btn btn-dark rounded-circle p-3 to-top" aria-label="Retour en haut" href="#home">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap Bundle (JS + Popper) - requis pour le Carousel et la Navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
