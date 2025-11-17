@@ -1,0 +1,43 @@
+:root{
+    --brand:#6c5ce7;      /* violet doux */
+    --brand-2:#a29bfe;    /* lavande */
+    --ink:#1f2937;        /* gris foncé */
+    --bg:#f8fafc;         /* gris très clair */
+    --card:#ffffff;       /* blanc */
+  }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); }
+
+  .navbar{ box-shadow:0 6px 20px rgba(31,41,55,.05); }
+  .navbar-brand .logo-dot{ display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--brand-2);margin-left:.25rem; }
+
+  .hero{
+    background: radial-gradient(90rem 60rem at 10% 10%, rgba(162,155,254,.25), transparent 40%),
+                radial-gradient(100rem 70rem at 90% 0%, rgba(108,92,231,.2), transparent 40%);
+    padding: 8rem 0 5rem;
+  }
+  .hero .avatar{
+    width: 160px; height:160px; object-fit:cover; border-radius:50%;
+    border:6px solid #fff; box-shadow:0 10px 30px rgba(108,92,231,.25);
+  }
+  #chipp{
+    border:1px solid rgba(108,92,231,.35); color:var(--brand); background:#fff; 
+  }
+  .project-card{ border:0; border-radius:1rem; overflow:hidden; box-shadow:0 12px 30px rgba(31,41,55,.08); }
+  .section-title{ font-weight:800; letter-spacing:.3px; color:var(--ink); }
+
+  /* Bouton Haut de page (sans JS: simple ancre vers #home) */
+  .to-top{
+    position:fixed; right:1rem; bottom:1rem; z-index:1030;
+  }
+
+
+
+  /* Couleur au survol */
+#nav-lin:hover {
+    color: rgba(108,92,231,.35)
+  }
+
+
+
+  footer{ background:#0f172a; color:#e2e8f0; }
