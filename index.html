@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/projet.css">
   <meta name="description" content="Portfolio personnel de (Ton Nom) — Développeur Web | Étudiant·e en Informatique | Projets, compétences, réalisations et contact." />
 
   <!-- Bootstrap CSS -->
@@ -11,40 +15,6 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <style>
-    :root{
-      --brand:#6c5ce7;      /* violet doux */
-      --brand-2:#a29bfe;    /* lavande */
-      --ink:#1f2937;        /* gris foncé */
-      --bg:#f8fafc;         /* gris très clair */
-      --card:#ffffff;       /* blanc */
-    }
-    html{ scroll-behavior:smooth; }
-    body{ background:var(--bg); color:var(--ink); }
-
-    .navbar{ box-shadow:0 6px 20px rgba(31,41,55,.05); }
-    .navbar-brand .logo-dot{ display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--brand-2);margin-left:.25rem; }
-
-    .hero{
-      background: radial-gradient(90rem 60rem at 10% 10%, rgba(162,155,254,.25), transparent 40%),
-                  radial-gradient(100rem 70rem at 90% 0%, rgba(108,92,231,.2), transparent 40%);
-      padding: 8rem 0 5rem;
-    }
-    .hero .avatar{
-      width: 160px; height:160px; object-fit:cover; border-radius:50%;
-      border:6px solid #fff; box-shadow:0 10px 30px rgba(108,92,231,.25);
-    }
-    .chip{ border:1px solid rgba(108,92,231,.35); color:var(--brand); background:#fff; }
-    .project-card{ border:0; border-radius:1rem; overflow:hidden; box-shadow:0 12px 30px rgba(31,41,55,.08); }
-    .section-title{ font-weight:800; letter-spacing:.3px; color:var(--ink); }
-
-    /* Bouton Haut de page (sans JS: simple ancre vers #home) */
-    .to-top{
-      position:fixed; right:1rem; bottom:1rem; z-index:1030;
-    }
-
-    footer{ background:#0f172a; color:#e2e8f0; }
-  </style>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -59,11 +29,11 @@
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-          <li class="nav-item"><a class="nav-link" href="#awards">Réalisations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link " id="nav-lin" href="#home">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link " id="nav-lin" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" id="nav-lin" href="#skills">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" id="nav-lin" href="#awards">Réalisations</a></li>
+          <li class="nav-item"><a class="nav-link" id="nav-lin" href="#contact">Contact</a></li>
           <li class="nav-item ms-lg-3">
             <a class="btn btn-sm btn-primary px-3" style="--bs-btn-bg:var(--brand);--bs-btn-border-color:var(--brand);" href="#contact">Me contacter</a>
           </li>
@@ -77,10 +47,10 @@
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-5 text-center text-lg-start">
-          <img class="avatar mb-3" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=600&auto=format&fit=crop" alt="Photo de profil">
+          <img class="avatar mb-3" src="img/profil.png" alt="Photo de profil">
           <div>
-            <span class="badge rounded-pill chip me-1">Développeur Web</span>
-            <span class="badge rounded-pill chip me-1">Étudiant en Informatique a l'Universite de Moncton</span>
+            <span class="badge rounded-pill chip me-1" id="chipp">Développeur Web</span>
+            <span class="badge rounded-pill chip me-1" id="chipp">Étudiant en Informatique a l'Universite de Moncton</span>
           </div>
         </div>
         <div class="col-12 col-lg-7">
@@ -321,7 +291,7 @@
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="name" class="form-label">Nom complet</label>
-                <input type="text" class="form-control" id="name" placeholder="Ex: Aicha Ba" required>
+                <input type="text" class="form-control" id="name" placeholder="Ex: Prenom Nom" required>
               </div>
               <div class="col-md-6">
                 <label for="email" class="form-label">Email</label>
